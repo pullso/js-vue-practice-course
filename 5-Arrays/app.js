@@ -20,32 +20,32 @@ window.addEventListener('DOMContentLoaded', e => {
   // value = 'hello world'.split('');
   // console.log(value, numArr);
   //**ДЗ */
-  // function getArray(num) {
-  //   let arr = [];
-  //   for (let i = 0; i < num; i++) {
-  //     arr.push(i + 1);
-  //   }
-  //   console.log(arr);
-  //   return arr;
-  // }
+  function getArray(num) {
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+      arr.push(i + 1);
+    }
+    console.log(arr);
+    return arr;
+  }
   // getArray(10);
-  // function doubleArray(arr) {
-  //   arr = arr.concat(arr);
-  //   console.log('arr: ', arr);
-  //   return arr;
-  // }
-  // doubleArray([1, 2, 3]);
+  function doubleArray(arr) {
+    arr = arr.concat(arr);
+    console.log('arr: ', arr);
+    return arr;
+  }
+  doubleArray([1, 2, 3]);
 
-  // function changeCollection() {
-  //   if (!arguments[0]) return false;
-  //   for (let i = 0; i < arguments.length; i++) {
-  //     if (Array.isArray(arguments[i])) {
-  //       arguments[i].shift();
-  //     }
-  //     console.log(arguments[i]);
-  //   }
-  //   return arguments;
-  // }
+  function changeCollection() {
+    if (!arguments.length) return false;
+    for (let i = 0; i < arguments.length; i++) {
+      if (Array.isArray(arguments[i])) {
+        arguments[i].shift();
+      }
+      //console.log(arguments[i]);
+    }
+    return arguments;
+  }
 
   // console.log(changeCollection([1, 2, 3], ['a', 'b', 'c']));
 
@@ -77,6 +77,13 @@ window.addEventListener('DOMContentLoaded', e => {
   ];
 
   function filterUsers(arr, key, value) {
+    if (!Array.isArray(arr))
+      return new Error('The first argument should be an array');
+    if (typeof key !== 'string' || key === '')
+      return new Error('The key should be a valid string');
+    if (value === undefined || value === null)
+      return new Error('The value should be a valid value.');
+
     let ret = [];
     for (let i = 0; i < arr.length; i++) {
       let item = arr[i];

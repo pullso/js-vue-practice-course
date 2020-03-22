@@ -45,14 +45,14 @@ window.addEventListener('DOMContentLoaded', e => {
   // }
   // console.log(multiply(2, 4, 5, 6), multiply());
   // clgmultiply();
-  // function reverseString(str) {
-  //   str = String(str);
-  //   strNew = '';
-  //   for (i = str.length - 1; i >= 0; i--) {
-  //     strNew += str[i];
-  //   }
-  //   return strNew;
-  // }
+  function reverseString(str) {
+    str = String(str);
+    strNew = '';
+    for (i = str.length - 1; i >= 0; i--) {
+      strNew += str[i];
+    }
+    return strNew;
+  }
   // console.log(
   //   reverseString('test'),
   //   reverseString(''),
@@ -61,15 +61,15 @@ window.addEventListener('DOMContentLoaded', e => {
   //   reverseString()
   // );
 
-  // function getCodeStringFromText(str) {
-  //   str = String(str);
-  //   let strNew = '';
-  //   for (let i = 0; i < str.length; i++) {
-  //     strNew += ` ${str[i].charCodeAt()} `;
-  //   }
-  //   strNew.trim();
-  //   return strNew;
-  // }
+  function getCodeStringFromText(str) {
+    str = String(str);
+    let strNew = '';
+    for (let i = 0; i < str.length; i++) {
+      strNew += str[i].charCodeAt() + ' ';
+    }
+
+    return strNew.trim();
+  }
 
   // console.log(getCodeStringFromText('hello'));
 
