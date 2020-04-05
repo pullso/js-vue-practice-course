@@ -66,6 +66,9 @@ for (let i = 0; i < listLi.length; i++) {
 }
 const ulA = document.querySelector('ul~a');
 ulA.setAttribute('id', 'link');
+ul.querySelectorAll('li').forEach(li => {
+  li.insertAdjacentElement('beforebegin', 'strong');
+});
 // console.log(ul.nextElementSibling, ul.previousElementSibling);
 
 // const p = document.querySelector('p');
