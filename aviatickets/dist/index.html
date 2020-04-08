@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +9,17 @@
       rel="stylesheet"
     />
 
-    <title>Document</title>
-  </head>
+    <title>Авиабилеты</title>
+  <link href="./style.css" rel="stylesheet"></head>
   <body>
     <nav class="header purple darken-1">
       <div class="nav-wrapper">
         <div class="container d-flex align-items-center">
           <div class="logo d-flex align-items-center">
-            <i class="large material-icons">flight_takeoff</i>
-            <a href="#" class="brand-logo">Avia Tickets</a>
+            <a href="#" class="brand-logo">
+              <i class="large material-icons">flight_takeoff</i>
+              Авиа Билеты
+            </a>
           </div>
           <div class="favorites">
             <!-- Dropdown Trigger -->
@@ -25,12 +27,12 @@
               class="dropdown-trigger btn purple lighten-5 black-text"
               href="#"
               data-target="dropdown1"
-              >Favorites</a
+              >Избранное</a
             >
 
             <!-- Dropdown Structure -->
             <div id="dropdown1" class="dropdown-content">
-              <div class="favorite-item  d-flex align-items-start">
+              <div class="favorite-item d-flex align-items-start">
                 <img
                   src="http://pics.avs.io/200/200/PS.png"
                   class="favorite-item-airline-img"
@@ -58,12 +60,12 @@
                   </div>
                   <a
                     class="waves-effect waves-light btn-small pink darken-3 delete-favorite ml-auto"
-                    >Delete</a
+                    >Удалить</a
                   >
                 </div>
               </div>
               <!-- /favorite item -->
-              <div class="favorite-item  d-flex align-items-start">
+              <div class="favorite-item d-flex align-items-start">
                 <img
                   src="http://pics.avs.io/200/200/PS.png"
                   class="favorite-item-airline-img"
@@ -98,12 +100,13 @@
               <!-- /favorite item -->
             </div>
           </div>
+
           <ul id="nav-mobile" class="right hide-on-med-and-down ml-auto">
             <li>
               <div class="input-field currency-select">
                 <select id="currency">
-                  <option value="USD">$ US Dollar</option>
-                  <option value="EUR">€ Euro</option>
+                  <option value="USD">$ Доллары</option>
+                  <option value="EUR">€ Евро</option>
                 </select>
               </div>
             </li>
@@ -118,14 +121,14 @@
             <div class="card">
               <form name="locationControls">
                 <div class="card-content">
-                  <span class="card-title">Card Title</span>
+                  <span class="card-title">Поиск авиабилета</span>
                   <div class="input-field">
                     <input
                       type="text"
                       id="autocomplete-origin"
                       class="autocomplete"
                     />
-                    <label for="autocomplete-origin">Origin</label>
+                    <label for="autocomplete-origin">Откуда</label>
                   </div>
                   <div class="input-field">
                     <input
@@ -133,23 +136,25 @@
                       id="autocomplete-destination"
                       class="autocomplete"
                     />
-                    <label for="autocomplete-destination">Destination</label>
+                    <label for="autocomplete-destination">Куда</label>
                   </div>
-                  <div class="input-field">
+
+                  <div class="inpit-field">
                     <input
                       type="text"
                       class="datepicker"
                       id="datepicker-depart"
                     />
-                    <label for="datepicker-depart">Depart date</label>
+                    <label for="datepicker-depart">Туда</label>
                   </div>
-                  <div class="input-field">
+
+                  <div class="inpit-field">
                     <input
                       type="text"
                       class="datepicker"
                       id="datepicker-return"
                     />
-                    <label for="datepicker-return">Return date</label>
+                    <label for="datepicker-return">Обратно</label>
                   </div>
                 </div>
                 <div class="card-action d-flex">
@@ -158,7 +163,7 @@
                     type="submit"
                     name="action"
                   >
-                    Search
+                    Найти
                     <i class="material-icons right">send</i>
                   </button>
                   <button
@@ -166,7 +171,7 @@
                     type="reset"
                     name="action"
                   >
-                    Reset
+                    Очистить
                     <i class="material-icons right">cancel</i>
                   </button>
                 </div>
@@ -178,44 +183,8 @@
     </div>
     <div class="tickets-sections">
       <div class="container">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card ticket-card">
-              <div class="ticket-airline d-flex align-items-center">
-                <img
-                  src="http://pics.avs.io/200/200/PS.png"
-                  class="ticket-airline-img"
-                />
-                <span class="ticket-airline-name"
-                  >Ukraine International airlines</span
-                >
-              </div>
-              <div class="ticket-destination d-flex align-items-center">
-                <div class="d-flex align-items-center mr-auto">
-                  <span class="ticket-city">Харьков </span>
-                  <i class="medium material-icons">flight_takeoff</i>
-                </div>
-                <div class="d-flex align-items-center">
-                  <i class="medium material-icons">flight_land</i>
-                  <span class="ticket-city">Львов</span>
-                </div>
-              </div>
-              <div class="ticket-time-price d-flex align-items-center">
-                <span class="ticket-time-departure">14 Sep 2019 02:30</span>
-                <span class="ticket-price ml-auto">$315</span>
-              </div>
-              <div class="ticket-additional-info">
-                <span class="ticket-transfers">Пересадок: 1</span>
-                <span class="ticket-flight-number">Номер рейса: 26</span>
-              </div>
-              <a
-                class="waves-effect waves-light btn-small green darken-1 add-favorite ml-auto"
-                >Add to favorites</a
-              >
-            </div>
-          </div>
-        </div>
+        <div class="row"></div>
       </div>
     </div>
-  </body>
+  <script type="text/javascript" src="polyfill.c5c18b27d8d625aac2f0.js"></script><script type="text/javascript" src="app.c5c18b27d8d625aac2f0.js"></script></body>
 </html>
