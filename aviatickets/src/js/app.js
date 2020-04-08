@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const depart_date = formUI.departDateValue;
     const return_date = formUI.returnDateValue;
     const currency = currencyUI.currencyValue;
+
     //Code, Code, 2019-09, 2019-10
     await locations.fetchTickets({
       origin,
@@ -35,7 +36,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
       return_date,
       currency,
     });
-    console.log(origin, destination, depart_date, return_date);
     ticketsUI.renderTickets(locations.latsSearch);
   }
 });

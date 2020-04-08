@@ -22,7 +22,6 @@ class Locations {
     this.cities = this.serializeCities(cities);
     this.shortCitiesList = this.createShortCitiesList(this.cities);
     this.airlines = this.serializeAirlines(airlines);
-    console.log(this.cities);
     return response;
   }
 
