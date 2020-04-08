@@ -4,6 +4,7 @@ class TicketsUI {
   constructor(currency) {
     this.container = document.querySelector('.tickets-sections .row');
     this.getCurrencySymbol = currency.getCurrencySymbol.bind(currency);
+    this.renderedItems = {};
   }
   renderTickets(tickets) {
     this.clearContainer();
@@ -20,6 +21,7 @@ class TicketsUI {
     });
 
     this.container.insertAdjacentHTML('afterbegin', fragment);
+    this.renderedItems = document.querySelectorAll('.add-favorite');
   }
   clearContainer() {
     this.container.innerHTML = '';
@@ -59,13 +61,27 @@ class TicketsUI {
                 </div>
               </div>
               <div class="ticket-time-price d-flex align-items-center">
-                <span class="ticket-time-departure">${ticket.departure_at}</span>
-                <span class="ticket-price ml-auto">${currency}${ticket.price}</span>
+                <span class="ticket-time-departure">${
+                  ticket.departure_at
+                }</span>
+                <span class="ticket-price ml-auto">${currency}${
+      ticket.price
+    }</span>
               </div>
               <div class="ticket-additional-info">
-                <span class="ticket-transfers">Пересадок: ${ticket.transfers}</span>
-                <span class="ticket-flight-number">Номер рейса: ${ticket.flight_number}</span>
+                <span class="ticket-transfers">Пересадок: ${
+                  ticket.transfers
+                }</span>
+                <span class="ticket-flight-number">Номер рейса: ${
+                  ticket.flight_number
+                }</span>
               </div>
+               <a
+                class="waves-effect waves-light btn-small green darken-1 add-favorite ml-auto"
+                  data-current-ticket='${JSON.stringify(
+                    ticket
+                  )}'>Добавить в избранное</a
+              >
             </div>
           </div>
     `;
